@@ -13,8 +13,6 @@ def metrics():
 
     return campaign_params, campaign_fields
 
-#metrics = metrics() 
-
 '''
 Authentication and sign in  
 '''
@@ -34,15 +32,10 @@ def authenticate():
     
     test end
     '''
-#authenticate = authenticate()
-#print(authenticate)
-
-
 
 '''
 Campaign data 
-'''                
-
+'''
 def campaigns_get():
     campaigns = fn.Campaigns()
     campaign_data = campaigns.campaigns_list(
@@ -51,19 +44,31 @@ def campaigns_get():
         accounts = authenticate
     )
     return campaign_data
+            
+'''
+Campaign name 
+'''
+def name(data):
+    nm = fn.Id()
+    name = nm.id(data)
+    return name
 
-def tbl(campaign):
-    for i in campaign:
-        print(i['campaign_name'])
-             
-            
-            
+
+    
+
 
 if __name__ == "__main__":
     metrics = metrics()
     authenticate = authenticate()
     campaign = campaigns_get()
-    tbl(campaign)
+    ids = name(campaign)
+    print(len(ids))
+    '''
+    for i in campaign[2]:
+        print(i['account_id'])
+    '''
+
+
 
     
 else:

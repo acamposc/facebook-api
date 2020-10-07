@@ -33,7 +33,8 @@ class Params():
                 #    'device_platform',  
                 #],
 
-                'time_increment': 'monthly',
+                'time_increment': 1,
+                'date_preset': 'last_3d',
                 'sort': ['campaign_name_descending'],            
                 'level': 'campaign'
             }
@@ -134,3 +135,11 @@ class Campaigns():
         return(ins)
 
         #return insights
+
+class Id():  
+    def id(self, data):
+        ax = []
+        for i in range(len(data)):
+            ax.append(data[i])       
+        return ax    
+
