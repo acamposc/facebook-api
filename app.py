@@ -62,7 +62,7 @@ if __name__ == "__main__":
     authenticate = authenticate()
     campaign = campaigns_get()
     ids = name(campaign)
-    print(len(ids))
+    print(ids)
     '''
     for i in campaign[2]:
         print(i['account_id'])

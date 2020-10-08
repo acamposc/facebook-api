@@ -138,8 +138,18 @@ class Campaigns():
 
 class Id():  
     def id(self, data):
+        for dx in data:
+            for d in dx:
+                dy = dict(d)
+                print('campaign_id:', dy['campaign_id'])
+                print('campaign_name:', dy['campaign_name'])
+                print('account_id: ', dy['account_id'])
+                print('objective: ', dy['objective'])
+        
+     
+        '''
         ax = []
         for i in range(len(data)):
             ax.append(data[i])       
         return ax    
-
+        '''
